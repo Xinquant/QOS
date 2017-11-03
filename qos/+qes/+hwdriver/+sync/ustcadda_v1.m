@@ -272,26 +272,27 @@ classdef ustcadda_v1 < qes.hwdriver.icinterface_compatible % extends icinterface
         % ad1, ad3 and ad4.
         function isSuccessed = Run(obj,adList) 
             isSuccessed = 1;
-            for k = 1:obj.numDABoards
-                obj.da_list(k).da.StartStop((15 - obj.da_list(k).mask_min)*16);
-                obj.da_list(k).da.StartStop(obj.da_list(k).mask_plus);
-            end
-            for k=1:obj.numDABoards
-                try
-                    state = obj.da_list(k).da.CheckStatus();
-                    if(state.isSuccessed ~= 1)
-                        obj.da_list(k).da.GetReturn(state.position);% Throw an exception.
-                    end
-                catch
-                    obj.da_list(k).da.Close();
-                    obj.da_list(k).da.Open();
-                    obj.da_list(k).da.SetTimeOut(0,2);
-                    obj.da_list(k).da.SetTimeOut(1,2);
-                    isSuccessed = 0;
-                end
-            end
             ret = ones(1,length(adList));
             while(sum(ret) ~= 0)
+                for k = 1:obj.numDABoards
+                    obj.da_list(k).da.StartStop((15 - obj.da_list(k).mask_min)*16);
+                    obj.da_list(k).da.StartStop(obj.da_list(k).mask_plus);
+                end
+                for k=1:obj.numDABoards
+                    try
+                        state = obj.da_list(k).da.CheckStatus();
+                        if(state.isSuccessed ~= 1)
+                            obj.da_list(k).da.GetReturn(state.position);% Throw an exception.
+                        end
+                    catch
+                        obj.da_list(k).da.Close();
+                        obj.da_list(k).da.Open();
+                        obj.da_list(k).da.SetTimeOut(0,2);
+                        obj.da_list(k).da.SetTimeOut(1,2);
+                        isSuccessed = 0;
+                    end
+                end
+                
                 for k = 1:length(adList)
                     obj.ad_list(adList(k)).ad.EnableADC(); 
                 end

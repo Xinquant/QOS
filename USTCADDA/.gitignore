@@ -1,0 +1,11 @@
+*.html
+.project
+*.class
+*.jar
+doc/stylesheet.css
+*.js
+*.dll
+dll/USTCADCDriver.h
+*.h
+.settings/org.eclipse.core.resources.prefs
+doc/package-list
