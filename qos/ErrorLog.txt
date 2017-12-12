@@ -40,3 +40,146 @@
 31-Oct-2017 09:44:30 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
 31-Oct-2017 09:44:35 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
 31-Oct-2017 09:44:57 USTCDAC:Open:C01 Error code:10060 --> Windows API failed: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+06-Nov-2017 16:22:29 USTCDAC:Open:C02 Error code:10060 --> Windows API failed: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+06-Nov-2017 16:28:34 USTCDAC:Open:C02 Error code:10060 --> Windows API failed: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+06-Nov-2017 16:44:47 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 16:51:35 USTCDAC:CheckStatus:C02 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 16:51:56 USTCDAC:Open:C02 Error code:10060 --> Windows API failed: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+06-Nov-2017 17:11:11 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 17:19:29 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 17:38:12 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 17:52:40 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 17:54:09 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 17:54:36 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 17:57:00 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 18:11:09 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 19:00:20 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 19:21:26 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 19:29:45 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 19:47:01 USTCDAC:GetReturn:C01 Error code:2 --> Windows API failed: 系统找不到指定的文件。
+06-Nov-2017 20:00:03 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:00:35 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:01:42 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:03:44 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:04:27 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:05:59 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:06:54 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:07:22 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:10:39 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:12:16 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:13:56 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:14:52 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:15:17 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:15:44 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:16:32 USTCDAC:GetReturn:C01 Error code:2 --> Windows API failed: 系统找不到指定的文件。
+06-Nov-2017 20:18:10 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:23:40 USTCDAC:GetReturn:C01 Error code:2 --> Windows API failed: 系统找不到指定的文件。
+06-Nov-2017 20:24:43 USTCDAC:GetReturn:C01 Error code:2 --> Windows API failed: 系统找不到指定的文件。
+06-Nov-2017 20:25:42 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:26:20 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:29:41 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:30:26 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:30:45 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:31:43 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:36:21 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:37:27 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:38:20 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:41:24 USTCDAC:GetReturn:C01 Error code:2 --> Windows API failed: 系统找不到指定的文件。
+06-Nov-2017 20:44:12 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:47:17 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:47:31 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 20:48:14 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 21:38:53 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 21:41:10 USTCDAC:GetReturn:C01 Error code:2 --> Windows API failed: 系统找不到指定的文件。
+06-Nov-2017 21:57:38 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:28:17 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:31:46 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:32:14 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:32:19 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:33:25 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:33:33 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:33:59 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:34:14 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:34:52 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:36:51 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:36:58 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:37:07 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:38:07 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:38:14 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:38:28 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:38:39 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:38:50 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:39:03 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:39:30 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:39:58 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:40:42 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:40:59 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:42:08 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:42:17 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:42:32 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:42:50 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:43:24 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:44:14 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:44:30 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:45:22 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:47:03 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:47:13 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:50:17 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 22:56:37 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 23:03:24 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 23:03:29 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 23:03:46 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 23:03:52 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 23:04:18 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 23:04:50 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 23:12:50 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+06-Nov-2017 23:34:50 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:14:29 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:20:21 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:23:10 USTCDAC:GetReturn:C01 Error code:2 --> Windows API failed: 系统找不到指定的文件。
+07-Nov-2017 00:23:14 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:25:25 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:26:12 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:27:07 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:27:25 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:27:45 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:27:56 USTCDAC:GetReturn:C01 Error code:2 --> Windows API failed: 系统找不到指定的文件。
+07-Nov-2017 00:28:37 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:29:23 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:34:44 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:35:07 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:35:13 USTCDAC:GetReturn:C01 Error code:2 --> Windows API failed: 系统找不到指定的文件。
+07-Nov-2017 00:35:34 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:35:45 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:36:21 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:36:34 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:36:59 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:37:04 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:37:39 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:37:56 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:38:06 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:39:20 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:40:21 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:42:23 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:42:33 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:44:26 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:45:05 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:45:21 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:46:28 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:46:34 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:46:56 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:47:11 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:47:46 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:47:59 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:49:05 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:50:24 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:51:38 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:52:06 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:55:34 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:56:26 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:56:55 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:57:00 USTCDAC:CheckStatus:C01 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+07-Nov-2017 00:57:21 USTCDAC:Open:C01 Error code:10060 --> Windows API failed: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+07-Nov-2017 20:23:22 USTCDAC:Open:C01 Error code:10060 --> Windows API failed: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+08-Nov-2017 14:01:00 USTCDAC:CheckStatus:C02 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
+08-Nov-2017 14:01:22 USTCDAC:Open:C02 Error code:10060 --> Windows API failed: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。

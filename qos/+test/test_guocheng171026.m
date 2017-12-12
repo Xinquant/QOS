@@ -23,15 +23,18 @@ ustcaddaObj.SetADSampleDepth(1,2000);
 irepeat = 1;
 while(1)
     tic
-    for ch = 1:16
+    for ch = 1:chA
         ustcaddaObj.SendWave(ch,wavedata);
     end
     ret = ustcaddaObj.Run(1);
+%     if(ret == 1)
+%         subplot(2,1,1);plot(ustcaddaObj.ad_list(1).I');
+%         subplot(2,1,2);plot(ustcaddaObj.ad_list(1).Q');
+%         pause(0.5);
+%     end
     if(ret == 1)
-        subplot(2,1,1);plot(ustcaddaObj.ad_list(1).I');
-        subplot(2,1,2);plot(ustcaddaObj.ad_list(1).Q');
-        pause(0.5);
-    end
-    disp([irepeat,toc]);
-    irepeat = irepeat + 1;
+        disp([irepeat,toc]);
+        irepeat = irepeat + 1;
+    end 
+    
 end

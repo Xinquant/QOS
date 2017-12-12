@@ -207,17 +207,10 @@ classdef ustcadda_v1 < qes.hwdriver.icinterface_compatible % extends icinterface
 				obj.ad_list(k).ad.SetMode(s.ad_boards{k}.demod);
                 obj.ad_list(k).ad.SetTrigCount(s.ad_boards{k}.records_para.trig_count);
                 obj.ad_list(k).ad.SetSampleDepth(s.ad_boards{k}.records_para.sample_length);
-                freq_num = length(s.ad_boards{k}.demod_para.demod_freq);
-                window_start = zeros(1,freq_num);
-                window_width = zeros(1,freq_num);
-                demod_freq = zeros(1,freq_num);
-                for t = 1:freq_num
-                    window_start(t) = s.ad_boards{k}.demod_para.window_start{t};
-                    window_width(t) = s.ad_boards{k}.demod_para.window_width{t};
-                    demod_freq(t) = s.ad_boards{k}.demod_para.demod_freq{t};
-                end
-                obj.SetADDemodFreq(k,window_start,window_width,demod_freq);
-                obj.ad_list(k).ad.SetGain([s.ad_boards{k}.channel_gain{1},s.ad_boards{k}.channel_gain{2}]);
+                obj.ad_list(k).ad.SetWindowStart(s.ad_boards{k}.demod_para.window_start);
+                obj.ad_list(k).ad.SetWindowWidth(s.ad_boards{k}.demod_para.window_width);
+                obj.ad_list(k).ad.SetDemoFre(s.ad_boards{k}.demod_para.demod_freq{1});
+                obj.ad_list(k).ad.SetGain(s.ad_boards{k}.channel_gain);
                 obj.ad_list(k).I = [];
                 obj.ad_list(k).Q = [];
             end
@@ -430,14 +423,31 @@ classdef ustcadda_v1 < qes.hwdriver.icinterface_compatible % extends icinterface
                 error('ustcadda_v1:SetADDemod','参数维度不同！');
             end
         end
-        function SetADDemodFreq(obj,adList,window_start,window_width,demod_freq)
-            [adCount,~] = size(demod_freq);
-            if(length(adList) == adCount)
+        function SetADDemodFreq(obj,adList,freq)
+            if(length(adList) == length(freq))
                 for k = 1:length(adList)
-                    obj.ad_list(adList(k)).ad.ConfigDemod(window_start(k,:),window_width(k,:),demod_freq(k,:));
+                    obj.ad_list(adList(k)).ad.SetDemoFre(freq(k));
                 end
             else
                 error('ustcadda_v1:SetADDemodFreq','参数维度不同！');
+            end
+        end
+        function SetADWindowStart(obj,adList,pos)
+            if(length(adList) == length(pos))
+                for k = 1:length(adList)
+                    obj.ad_list(adList(k)).ad.SetWindowStart(pos(k));
+                end
+            else
+                error('ustcadda_v1:SetADWindowStart','参数维度不同！');
+            end
+        end
+        function SetADWindowWidth(obj,adList,width)
+            if(length(adList) == length(width))
+                for k = 1:length(adList)
+                    obj.ad_list(adList(k)).ad.SetWindowWidth(width(k));
+                end
+            else
+                error('ustcadda_v1:SetADWindowWidth','参数维度不同！');
             end
         end
         function SetADTrigCount(obj,adList,trig_count)

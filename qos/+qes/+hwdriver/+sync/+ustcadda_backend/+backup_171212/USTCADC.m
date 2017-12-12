@@ -41,6 +41,20 @@ classdef USTCADC < handle
             [ErrorCode,info] = calllib(qes.hwdriver.sync.ustcadda_backend.USTCADC.driver,'GetSoftInformation',str);
             qes.hwdriver.sync.ustcadda_backend.USTCADC.DispError('USTCDAC:GetDriverInformation:',ErrorCode);
         end
+        function list = ListAdapter()
+            list = blanks(2048);
+            str = libpointer('cstring',blanks(2048));
+            [ErrorCode,info] = calllib(qes.hwdriver.sync.ustcadda_backend.USTCADC.driver,'GetAdapterList',str);
+            if(ErrorCode == 0)
+                info = regexp(info,'\n', 'split');pos = 1;
+                for index = 1:length(info)
+                   info{index} = [num2str(index),' : ',info{index}];
+                   list(pos:pos + length(info{index})) = [info{index},10];
+                   pos = pos + length(info{index}) + 1;
+                end
+            end
+            qes.hwdriver.sync.ustcadda_backend.USTCADC.DispError('USTCADC:ListAdapter',ErrorCode);
+        end
         function DispError(MsgID,errorcode,id)
             if nargin == 2
                 id = 0;
@@ -56,8 +70,8 @@ classdef USTCADC < handle
     end
     
     methods
-        function obj = USTCADC(srcmac,dstmac)
-            obj.srcmac = srcmac;
+        function obj = USTCADC(num,dstmac)
+            obj.netcard = num;
             obj.dstmac = dstmac;
             obj.isopen = false;
             obj.status = 'close';
@@ -65,9 +79,8 @@ classdef USTCADC < handle
         function Open(obj)
             if ~obj.isopen
                 obj.LoadLibrary();
-                pMacSrc = libpointer('string',obj.srcmac);
-                pMacDst = libpointer('string',obj.dstmac);
-                [ErrorCode,obj.id] = calllib(obj.driver,'OpenADC',0,pMacSrc,pMacDst);
+                pMac = libpointer('string',obj.dstmac);
+                [ErrorCode,obj.id] = calllib(obj.driver,'OpenADC',0,int32(obj.netcard),pMac);
                 obj.DispError('USTCADC:Open',ErrorCode,obj.id);
                 obj.status = 'open';
                 obj.isopen = true;
@@ -88,7 +101,9 @@ classdef USTCADC < handle
             obj.SetSampleDepth();
             obj.SetTrigCount();
             obj.SetMode();
-            obj.ConfigDemod();
+            obj.SetWindowWidth();
+            obj.SetWindowStart();
+            obj.SetDemoFre();
             obj.SetGain();
         end
         function EnableADC(obj)
@@ -168,51 +183,40 @@ classdef USTCADC < handle
                 obj.DispError('USTCADC:SetMode',ErrorCode,obj.id);
             end
         end
-        function SetWindowWidth(obj,width)
+        function SetWindowWidth(obj,length)
+            if(nargin == 2)
+                obj.window_width = length;
+            end
             if(obj.isopen)
-                data = [0,20,floor(width/256),mod(width,256),0,0,0,0];
+                data = [0,20,floor(obj.window_width/256),mod(obj.window_width,256),0,0,0,0];
                 pdata = libpointer('uint8Ptr', data);
                 [ErrorCode,~] = calllib(obj.driver,'SendData',int32(obj.id),int32(8),pdata);
                 obj.DispError('USTCADC:SetWindowLength',ErrorCode,obj.id);
             end
         end
         function SetWindowStart(obj,pos)
+            if(nargin == 2)
+                obj.window_start = pos;
+            end
             if(obj.isopen)
-                data = [0,21,floor(pos/256),mod(pos,256),0,0,0,0];
+                data = [0,21,floor(obj.window_start/256),mod(obj.window_start,256),0,0,0,0];
                 pdata = libpointer('uint8Ptr', data);
                 [ErrorCode,~] = calllib(obj.driver,'SendData',int32(obj.id),int32(8),pdata);
                 obj.DispError('USTCADC:SetWindowStart',ErrorCode,obj.id);
             end
         end
-        function SetDemoFre(obj,freq)
+        function SetDemoFre(obj,fre)
+            if(nargin == 2)
+                obj.demod_freq = fre;
+            end
             if(obj.isopen)
-                step = floor(freq/1e9*16777216 + 0.5);
-                data1 = 0;
-                if(step < 0)
-                    data1 = 128;
-                    step = abs(step);
+                for k = 1:length(obj.demod_freq)
+                    step = floor(obj.demod_freq(k)/1e9*65536 + 0.5);
+                    data = [0,22,floor(step/256),mod(step,256),0,0,0,0];
+                    pdata = libpointer('uint8Ptr', data);
+                    [ErrorCode,~] = calllib(obj.driver,'SendData',int32(obj.id),int32(8),pdata);
+                    obj.DispError('USTCADC:SetDemoFre',ErrorCode,obj.id);
                 end
-                data1 = data1 + floor(step/131072);
-                data2 = mod(floor(step/512),256);
-                data3 = mod(floor(step/2),256);
-                data4 = mod(step,2)*128;
-                data = [0,22,data1,data2,data3,data4,0,0];
-                pdata = libpointer('uint8Ptr', data);
-                [ErrorCode,~] = calllib(obj.driver,'SendData',int32(obj.id),int32(8),pdata);
-                obj.DispError('USTCADC:SetDemoFre',ErrorCode,obj.id);
-            end
-        end
-        function ConfigDemod(obj,start,width,freq)
-            if(nargin == 4)            
-                obj.window_start = start;
-                obj.window_width = width;
-                obj.demod_freq = freq;
-            end
-            for k = 1:length(obj.demod_freq)
-                obj.SetWindowStart(obj.window_start(k));
-                obj.SetWindowWidth(obj.window_width(k));
-                obj.SetDemoFre(obj.demod_freq(k));
-                obj.CommitDemodSet(k-1);
             end
         end
         function SetGain(obj,gain)
@@ -222,22 +226,12 @@ classdef USTCADC < handle
                 end
             end
             if(obj.isopen)
-                data = [0,23,obj.channel_gain(1),obj.channel_gain(2),0,0,0,0];
+                data = [0,23,obj.channel_gain{1},obj.channel_gain{2},0,0,0,0];
                 pdata = libpointer('uint8Ptr',data);
                 [ErrorCode,~] = calllib(obj.driver,'SendData',int32(obj.id),int32(8),pdata);
                 obj.DispError('USTCADC:SetGain',ErrorCode,obj.id);
             end
         end
-        
-        function CommitDemodSet(obj,module)
-            if(obj.isopen)
-                data = [0,24,module*16,0,0,0,0,0];
-                pdata = libpointer('uint8Ptr',data);
-                [ErrorCode,~] = calllib(obj.driver,'SendData',int32(obj.id),int32(8),pdata);
-                obj.DispError('USTCADC:CommitDemodSet',ErrorCode,obj.id);
-            end
-        end
-        
         function SetADName(obj,name)
             obj.name = name;
         end
@@ -254,13 +248,13 @@ classdef USTCADC < handle
         end
         function [ret,I,Q] = RecvData(obj)
             if(obj.isdemod)
-                IQ = zeros(24*obj.trig_count,1);
+                IQ = zeros(2*obj.trig_count,1);
                 pIQ = libpointer('int32Ptr', IQ);
                 [ret,IQ] = calllib(obj.driver,'RecvDemo',int32(obj.id),int32(obj.trig_count),pIQ);
-                I = IQ(1:2:length(IQ));
-                I = reshape(I,12,obj.trig_count);
-                Q = IQ(2:2:length(IQ));
-                Q = reshape(Q,12,obj.trig_count);
+                if(ret == 0)
+                    I = IQ(1:2:length(IQ));
+                    Q = IQ(2:2:length(IQ));
+                end
             else
                 I = zeros(obj.trig_count*obj.sample_depth,1);
                 Q = zeros(obj.trig_count*obj.sample_depth,1);
