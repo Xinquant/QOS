@@ -200,7 +200,7 @@ classdef ustcadda_v1 < qes.hwdriver.icinterface_compatible % extends icinterface
                 end
             end
             for k = 1:obj.numADBoards
-                obj.ad_list(k).ad = qes.hwdriver.sync.ustcadda_backend.USTCADC(s.ad_boards{k}.netcard,s.ad_boards{k}.dstmac);
+                obj.ad_list(k).ad = qes.hwdriver.sync.ustcadda_backend.USTCADC(s.ad_boards{k}.srcmac,s.ad_boards{k}.dstmac);
                 obj.ad_list(k).ad.SetADName(s.ad_boards{k}.name);
                 obj.ad_list(k).ad.SetChannelNum(s.ad_boards{k}.numChnls);
                 obj.ad_list(k).ad.SetSampleFreq(s.ad_boards{k}.samplingRate);

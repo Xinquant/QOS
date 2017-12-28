@@ -183,3 +183,4 @@
 07-Nov-2017 20:23:22 USTCDAC:Open:C01 Error code:10060 --> Windows API failed: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
 08-Nov-2017 14:01:00 USTCDAC:CheckStatus:C02 Error code:-1543503871 --> USTCDACDRIVER API failed: The task(s) timeout.
 08-Nov-2017 14:01:22 USTCDAC:Open:C02 Error code:10060 --> Windows API failed: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+27-Dec-2017 22:58:23 USTCADC:EnableADC Error code:-469696509 --> USTCDACDRIVER API failed: send error: PacketSendPacket failed
