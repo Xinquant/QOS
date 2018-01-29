@@ -405,8 +405,8 @@ classdef ustcadda_v1 < qes.hwdriver.icinterface_compatible % extends icinterface
         function SetDATrigCount(obj,daList,trig_count)
             if(length(daList) == length(trig_count))
                 for k = 1:length(daList)
-                    obj.da_list(k).da.SetTrigCount(trig_count(k));
-                    obj.da_list(k).da.SetLoop(trig_count(k),trig_count(k),trig_count(k),trig_count(k));
+                    obj.da_list(daList(k)).da.SetTrigCount(trig_count(k));
+                    obj.da_list(daList(k)).da.SetLoop(trig_count(k),trig_count(k),trig_count(k),trig_count(k));
                 end
             else
                 error('ustcadda_v1:SetDATrigCount','参数维度不同！');
@@ -414,8 +414,8 @@ classdef ustcadda_v1 < qes.hwdriver.icinterface_compatible % extends icinterface
         end
         function SetDARuntimes(obj,daList,runResps)
             if(length(daList) == length(runResps))
-                for k = 1:daList
-                    obj.da_list(k).da.SetLoop(runResps(k),runResps(k),runResps(k),runResps(k));
+                for k = 1:length(daList)
+                    obj.da_list(daList(k)).da.SetLoop(runResps(k),runResps(k),runResps(k),runResps(k));
                 end
             else
                 error('ustcadda_v1:SetDARuntimes','参数维度不同！');
